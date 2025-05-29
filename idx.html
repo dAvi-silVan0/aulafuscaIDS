@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page Fusca 1979</title>
+        <link href="https://fonts.googleapis.com/css2?family=Exile&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="cc.css">
+        <link rel="stylesheet" href="sj.js">
+    </head>
+
+    <body class="body">
+        <header class="header">
+            <section>
+                <div class="container1">
+                    <img src="img.past\fuscacapa.jpg" alt="Fusca de lado" class="img-fusca">
+                    <h1 class="legenda"><strong>O retorno do clássico: Fusca 1979 em clima de aviação</strong></h1>
+                </div>
+            </section>
+        </header>
+       <section class="sectionMain">
+        <div class="texto">
+            <div>
+            <h1>Faltam <div id="contador" class="contador"><span id="contador"><script>
+                function atualizarContador() { const dataLancamento = new Date("2025-07-01T00:00:00"); 
+                const agora = new Date(); const diferenca = dataLancamento - agora;
+                if (diferenca <= 0) { document.getElementById("contador").innerText = "LANÇADO!"; 
+                return; } const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24)); 
+                const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+                const minutos = Math.floor((diferenca / (1000 * 60)) % 60); 
+                const segundos = Math.floor((diferenca / 1000) % 60); 
+                document.getElementById("contador").innerText = `${dias}d ${horas}h ${minutos}m ${segundos}s`; } setInterval(atualizarContador, 1000); atualizarContador();
+
+            </script></span></div> Para o Landing Page do Fusca 1979!</h1>
+            </div>
+            <section class="section1">
+                <h2>Sobre o Fusca</h2>
+                <p>O Fusca é muito mais que um carro. É uma memória afetiva sobre rodas, um símbolo da cultura automotiva brasileira. Em 1979, ele já era um fenômeno — agora, volta como ícone retrô que atravessa gerações com charme e simplicidade.</p>
+            </section>
+        </div>
+      
+          <div class="texto">
+            <h2>Características principais do Fusca</h2>
+            <p>Robustez, economia e mecânica confiável são marcas registradas do Fusca. Ele foi feito para durar, com peças simples, fácil manutenção e um motor que faz história. Compacto por fora, espaçoso por dentro — um verdadeiro parceiro para todas as ocasiões.</p>
+          </div>
+      
+          <div class="texto">
+            <h2>Fusca: parecido com um avião?</h2>
+            <p>Se você já ouviu o ronco do motor do Fusca, sabe: ele lembra o som de um avião antigo. Isso não é coincidência — o motor boxer refrigerado a ar tem herança aeronáutica. Seu desempenho todo-terreno e estabilidade em qualquer tipo de solo fazem dele quase um jato sobre o asfalto.</p>
+        </div>
+        <div class="texto">
+            <h2> Ficha Técnica (Fusca 1979)</h2>
+            <ul>
+              <li><strong>Motor:</strong> 1.3 Boxer 4 cilindros, refrigerado a ar</li>
+              <li><strong>Potência:</strong> 46 cv</li>
+              <li><strong>Velocidade Máxima:</strong> 125 km/h</li>
+              <li><strong>Câmbio:</strong> Manual de 4 marchas</li>
+              <li><strong>Consumo médio:</strong> até 12 km/l</li>
+              <li><strong>Tração:</strong> Traseira</li>
+              <li><strong>Peso:</strong> 800 kg</li>
+            </ul>
+          </div>
+       </section>
+        <footer class="footer">
+           <section>
+            <h2>📸 Galeria</h2>
+            <div class="galeria">
+              <button class="nav" onclick="mudarImagem(-1)">⬅️</button>
+              <img id="galeria" src="img.past\fuscafrente.jpg" alt="Imagem do Fusca com avião" />
+              <button class="nav" onclick="mudarImagem(1)">➡️</button>
+            </div>
+            <script>
+                const imagens = [
+                "fuscajato.jpg",
+                "fuscafrente.jpg",
+                "fuscatraz.jpg",
+                "fuscaviao.jpg",
+                "fuscacapa.jpg"
+                ];
+          
+                let indiceAtual = 0;
+          
+                function mudarImagem(direcao) {
+                  indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
+                  document.getElementById("galeria").src = imagens[indiceAtual];
+                }
+              </script>
+           </section>
+        </footer>
+    </body>
+</html>
+
